@@ -1,9 +1,10 @@
-# https://api.openweathermap.org/data/2.5/weather?appid=d01be56fa750cb01dda405748b334b83&q=Kolkata
+# https://api.openweathermap.org/data/2.5/weather?appid=********************&q=Kolkata
+# Please replace the 'appid' with your own 'appid'
 import requests
 res = requests.get('https://ipinfo.io/').json()
 
-api_address = 'https://api.openweathermap.org/data/2.5/weather?appid=d01be56fa750cb01dda405748b334b83&units=metric&q='
-# api_address = 'https://api.openweathermap.org/data/2.5/weather?appid=d01be56fa750cb01dda405748b334b83&q='
+api_address = 'https://api.openweathermap.org/data/2.5/weather?appid=*****************&units=metric&q='
+# api_address = 'https://api.openweathermap.org/data/2.5/weather?appid=***************&q='
 url = api_address + res['city']
 json_data = requests.get(url).json()
 weatherinfo = json_data['weather'][0]['main']
